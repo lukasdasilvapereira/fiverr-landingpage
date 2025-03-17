@@ -2,7 +2,9 @@ const botaoEntrar = document.querySelector('.menu-open')
 
 const botaoSair = document.querySelector('.menu-close')
 
-const items = document.querySelector('.popular-section')
+const items = document.querySelector('.nav-list')
+
+botaoSair.style.display = 'none';
 
 
 function entrar() {

@@ -61,13 +61,17 @@ a {
 
 }
 
-.menu-close , .menu-open {
+.menu-close , .menu-open i {
     display: none;
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 1em;
     cursor: pointer;
+}
+
+.menu-close {
+    display: none; /* Esconde o botão "X" por padrão */
 }
 
 /* Main section */
@@ -152,6 +156,7 @@ a {
 }
 
 @media screen and (max-width: 1327px) {
+
     .main-details{
         margin: auto;
         max-width: 350px;
@@ -173,7 +178,7 @@ a {
 
 @media screen and (max-width: 840px) {
 
-    body.show-mobile-menu header::before {
+    body.show-mobile-menu .header::before {
         content: "";
         position: fixed;
         top: 0;
@@ -188,10 +193,21 @@ a {
     body {
         overflow-x: hidden;
     }
-    .nav-links {
+
+    .nav-list{
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 10px;
+        padding: 30px;
     }
 
+    .nav-links {
+        font-size: 1.3em;
+        color: black;
+        margin-top: 30px;
+        display: block;
+    }
     .main-image {
         display: none;
     }
@@ -202,18 +218,8 @@ a {
 
     .popular-section {
         display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 10px;
-        padding: 30px;
     }
 
-    .popular-links {
-        border: none;
-        font-size: 1.3em;
-        color: black;
-        margin-top: 30px;
-    }
 
     .menu-close {
         display: none;
@@ -222,9 +228,11 @@ a {
         min-height: 100%;
         max-width: 300px;
         background-color: white;
+        padding: 10px;
+        font-size: 1.1em;
     }
 
-    .menu-open {
+    .menu-open i{
         display: block;
         color: white;
         font-size: 1.1em;
